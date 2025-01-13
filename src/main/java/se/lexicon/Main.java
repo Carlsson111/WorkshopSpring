@@ -1,6 +1,7 @@
 package se.lexicon;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import se.lexicon.Service.StudentManagement;
 import se.lexicon.config.ComponentScanConfig;
 import se.lexicon.data_access.StudentDao;
 import se.lexicon.util.UserInputService;
@@ -15,7 +16,9 @@ public class Main {
 
         UserInputService InputService =context.getBean(UserInputService.class);
 
-        InputService.getString();
+        StudentManagement studentManagement = context.getBean(StudentManagement.class);
+
+
 
 
     }
